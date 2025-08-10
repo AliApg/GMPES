@@ -1,0 +1,2744 @@
+[
+    {
+        "model_combination": {
+            "m_1": "SimCSE RoBERTa base",
+            "m_2": "Batch size (250) T5 11b"
+        },
+        "experiments": [
+            {
+                "parameters": {
+                    "population_size": 50,
+                    "num_generations": 50,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(m_2, sin(div(min(exp(inv(-0.21775676271994926)), m_1), exp(m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (250) T5 11b": 0.836575,
+                            "best_fitness": 0.867791
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (250) T5 11b": 0.840059,
+                            "test_correlation": 0.865561
+                        },
+                        "time_elapsed": "17 minutes and 14 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sqrt(min(add(div(m_1, log(sqrt(mean(m_1)))), mean(m_2)), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (250) T5 11b": 0.820422,
+                            "best_fitness": 0.830121
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (250) T5 11b": 0.582554,
+                            "test_correlation": 0.574816
+                        },
+                        "time_elapsed": "46 minutes and 31 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "min(m_2, min(sub(exp(m_1), 0.9533148398950813), sub(sqrt(mul(inv(m_2), log(m_1))), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (250) T5 11b": 0.873808,
+                            "best_fitness": 0.877232
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (250) T5 11b": 0.886872,
+                            "test_correlation": 0.889868
+                        },
+                        "time_elapsed": "5 minutes and 10 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(inv(inv(exp(max(m_2, m_1)))), max(mul(-0.06540049159151562, sqrt(div(m_1, m_1))), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (250) T5 11b": 0.836928,
+                            "best_fitness": 0.844923
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (250) T5 11b": 0.88741,
+                            "test_correlation": 0.890404
+                        },
+                        "time_elapsed": "15 minutes and 48 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "max(add(m_2, sub(-0.06112820401775498, m_1)), sin(add(add(-0.06112820401775498, m_2), add(m_2, m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (250) T5 11b": 0.874582,
+                            "best_fitness": 0.878395
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (250) T5 11b": 0.92387,
+                            "test_correlation": 0.928463
+                        },
+                        "time_elapsed": "6 minutes and 6 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "mul(sqrt(min(m_2, add(m_1, m_2))), sqrt(min(m_2, add(m_1, m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (250) T5 11b": 0.852087,
+                            "best_fitness": 0.865264
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (250) T5 11b": 0.865674,
+                            "test_correlation": 0.865452
+                        },
+                        "time_elapsed": "3 minutes and 42 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(sub(m_1, mul(mul(cos(m_2), m_2), log(add(m_2, 0.6132312484039357)))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (250) T5 11b": 0.79889,
+                            "best_fitness": 0.813501
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (250) T5 11b": 0.818173,
+                            "test_correlation": 0.832723
+                        },
+                        "time_elapsed": "24 minutes and 39 seconds"
+                    }
+                },
+                "timestamp": "2025-07-07T14:27:13.436323"
+            },
+            {
+                "parameters": {
+                    "population_size": 20,
+                    "num_generations": 20,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(sin(sin(m_2)), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (250) T5 11b": 0.836575,
+                            "best_fitness": 0.86688
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (250) T5 11b": 0.840059,
+                            "test_correlation": 0.866209
+                        },
+                        "time_elapsed": "3 minutes and 47 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "mul(sqrt(mul(0.7919717413213869, m_1)), div(m_2, 0.8194656451482885))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (250) T5 11b": 0.820422,
+                            "best_fitness": 0.826852
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (250) T5 11b": 0.582554,
+                            "test_correlation": 0.58322
+                        },
+                        "time_elapsed": "1 minute and 13 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "max(log(m_1), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (250) T5 11b": 0.873808,
+                            "best_fitness": 0.873834
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (250) T5 11b": 0.886872,
+                            "test_correlation": 0.886922
+                        },
+                        "time_elapsed": "38 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sin(sub(sub(m_1, m_2), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (250) T5 11b": 0.836928,
+                            "best_fitness": 0.844256
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (250) T5 11b": 0.88741,
+                            "test_correlation": 0.885271
+                        },
+                        "time_elapsed": "2 minutes and 5 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "add(sub(sub(m_2, sub(sub(m_1, m_2), max(sub(m_2, m_2), m_1))), m_2), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (250) T5 11b": 0.874582,
+                            "best_fitness": 0.877161
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (250) T5 11b": 0.92387,
+                            "test_correlation": 0.92905
+                        },
+                        "time_elapsed": "2 minutes and 18 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "sin(min(m_2, min(min(m_2, sin(mean(m_2))), sin(min(add(m_1, m_2), m_2)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (250) T5 11b": 0.852087,
+                            "best_fitness": 0.864896
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (250) T5 11b": 0.865674,
+                            "test_correlation": 0.860513
+                        },
+                        "time_elapsed": "2 minutes and 28 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sin(max(m_1, max(add(m_2, add(m_2, m_1)), m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (250) T5 11b": 0.79889,
+                            "best_fitness": 0.811272
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (250) T5 11b": 0.818173,
+                            "test_correlation": 0.830917
+                        },
+                        "time_elapsed": "7 minutes and 49 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T12:41:10.871321"
+            },
+            {
+                "parameters": {
+                    "population_size": 10,
+                    "num_generations": 10,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "mul(min(m_2, m_2), div(m_1, 0.6946483560265344))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (250) T5 11b": 0.836575,
+                            "best_fitness": 0.860221
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (250) T5 11b": 0.840059,
+                            "test_correlation": 0.85872
+                        },
+                        "time_elapsed": "43 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sqrt(log(sub(inv(add(inv(-0.7210087039622661), div(m_2, -0.378849199420044))), sub(m_2, sin(min(m_1, m_2))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (250) T5 11b": 0.820422,
+                            "best_fitness": 0.826993
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (250) T5 11b": 0.582554,
+                            "test_correlation": 0.589248
+                        },
+                        "time_elapsed": "33 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "m_2",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (250) T5 11b": 0.873808,
+                            "best_fitness": 0.873808
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (250) T5 11b": 0.886872,
+                            "test_correlation": 0.886872
+                        },
+                        "time_elapsed": "18 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(m_1, add(m_2, inv(cos(sqrt(sub(m_1, sin(0.1802256329125307)))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (250) T5 11b": 0.836928,
+                            "best_fitness": 0.845202
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (250) T5 11b": 0.88741,
+                            "test_correlation": 0.890318
+                        },
+                        "time_elapsed": "28 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "exp(add(m_2, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (250) T5 11b": 0.874582,
+                            "best_fitness": 0.874752
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (250) T5 11b": 0.92387,
+                            "test_correlation": 0.92384
+                        },
+                        "time_elapsed": "1 minute and 2 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "min(mul(sub(m_2, m_1), m_2), min(add(m_2, m_1), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (250) T5 11b": 0.852087,
+                            "best_fitness": 0.864746
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (250) T5 11b": 0.865674,
+                            "test_correlation": 0.860669
+                        },
+                        "time_elapsed": "16 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(m_1, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (250) T5 11b": 0.79889,
+                            "best_fitness": 0.811775
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (250) T5 11b": 0.818173,
+                            "test_correlation": 0.831695
+                        },
+                        "time_elapsed": "1 minute and 2 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T16:50:56.499851"
+            },
+            {
+                "parameters": {
+                    "population_size": 100,
+                    "num_generations": 100,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(sin(min(add(mul(m_1, 0.6904098115051747), mean(m_2)), m_1)), log(exp(m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (250) T5 11b": 0.836575,
+                            "best_fitness": 0.867921
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (250) T5 11b": 0.840059,
+                            "test_correlation": 0.866519
+                        },
+                        "time_elapsed": "2 hours, 30 minutes, and 54 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(min(add(-0.051777305153115405, m_2), add(add(m_1, m_2), m_1)), sub(add(-0.051777305153115405, m_2), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (250) T5 11b": 0.820422,
+                            "best_fitness": 0.830577
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (250) T5 11b": 0.582554,
+                            "test_correlation": 0.58859
+                        },
+                        "time_elapsed": "37 minutes and 39 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(mul(min(min(m_2, min(0.6980615425544172, log(0.6980615425544172))), m_1), add(0.20405422881177904, m_1)), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (250) T5 11b": 0.873808,
+                            "best_fitness": 0.877331
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (250) T5 11b": 0.886872,
+                            "test_correlation": 0.886911
+                        },
+                        "time_elapsed": "27 minutes and 41 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(m_1, add(max(m_2, add(-0.3369501242534172, m_2)), add(-0.3369501242534172, min(0.10646272340816854, div(m_2, 0.6971410698263474)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (250) T5 11b": 0.836928,
+                            "best_fitness": 0.845594
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (250) T5 11b": 0.88741,
+                            "test_correlation": 0.889276
+                        },
+                        "time_elapsed": "45 minutes and 23 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "mul(exp(add(m_1, exp(add(exp(add(m_2, m_1)), min(m_1, m_2))))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (250) T5 11b": 0.874582,
+                            "best_fitness": 0.878051
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (250) T5 11b": 0.92387,
+                            "test_correlation": 0.924817
+                        },
+                        "time_elapsed": "27 minutes and 23 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "min(min(sub(m_2, add(m_2, m_1)), mean(m_2)), add(m_2, add(m_2, m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (250) T5 11b": 0.852087,
+                            "best_fitness": 0.866579
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (250) T5 11b": 0.865674,
+                            "test_correlation": 0.865981
+                        },
+                        "time_elapsed": "16 minutes and 15 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "exp(sub(min(sub(m_1, div(m_2, 0.9087275446051903)), div(div(m_2, 0.9087275446051903), 0.9087275446051903)), 0.4944292575893616))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (250) T5 11b": 0.79889,
+                            "best_fitness": 0.816804
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (250) T5 11b": 0.818173,
+                            "test_correlation": 0.834521
+                        },
+                        "time_elapsed": "2 hours and 22 minutes"
+                    }
+                },
+                "timestamp": "2025-07-09T00:59:10.366323"
+            },
+            {
+                "parameters": {
+                    "population_size": 500,
+                    "num_generations": 500,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(add(-0.020620355349528552, m_2), min(m_1, mul(m_1, cos(cos(m_2)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (250) T5 11b": 0.836575,
+                            "best_fitness": 0.868273
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (250) T5 11b": 0.840059,
+                            "test_correlation": 0.866878
+                        },
+                        "time_elapsed": "30 hours, 4 minutes, and 26 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(sub(m_2, mean(m_1)), min(mul(inv(-0.8751600669326676), m_1), min(sub(m_2, m_1), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (250) T5 11b": 0.820422,
+                            "best_fitness": 0.830244
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (250) T5 11b": 0.582554,
+                            "test_correlation": 0.586444
+                        },
+                        "time_elapsed": "20 hours, 35 minutes, and 59 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(sub(m_2, -0.9396411117585184), sub(mean(mul(log(mean(sqrt(m_1))), m_1)), cos(sqrt(m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (250) T5 11b": 0.873808,
+                            "best_fitness": 0.879075
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (250) T5 11b": 0.886872,
+                            "test_correlation": 0.886582
+                        },
+                        "time_elapsed": "90 hours, 40 minutes, and 44 seconds"
+                    }
+                },
+                "timestamp": "2025-07-17T19:28:09.115696"
+            }
+        ]
+    },
+    {
+        "model_combination": {
+            "m_1": "SimCSE RoBERTa base",
+            "m_2": "Single T5 11b"
+        },
+        "experiments": [
+            {
+                "parameters": {
+                    "population_size": 50,
+                    "num_generations": 50,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(sin(max(m_1, mul(m_1, 0.8768142167045136))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 11b": 0.836576,
+                            "best_fitness": 0.867201
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 11b": 0.840115,
+                            "test_correlation": 0.866258
+                        },
+                        "time_elapsed": "16 minutes and 47 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(sub(sub(add(sub(0.13457768992079067, m_2), m_1), m_2), m_2), sub(m_1, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 11b": 0.820384,
+                            "best_fitness": 0.829346
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 11b": 0.582589,
+                            "test_correlation": 0.588915
+                        },
+                        "time_elapsed": "6 minutes and 26 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "sub(exp(m_1), add(add(m_2, add(m_2, sin(cos(m_2)))), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 11b": 0.873847,
+                            "best_fitness": 0.877422
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 11b": 0.886978,
+                            "test_correlation": 0.886689
+                        },
+                        "time_elapsed": "6 minutes and 49 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "min(sub(m_2, -0.046718769028176954), min(m_2, sub(m_2, sin(sin(max(0.014087428795648504, m_1))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 11b": 0.836929,
+                            "best_fitness": 0.84521
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 11b": 0.887414,
+                            "test_correlation": 0.884741
+                        },
+                        "time_elapsed": "20 minutes and 24 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "exp(inv(sub(cos(sqrt(m_1)), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 11b": 0.874595,
+                            "best_fitness": 0.876117
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 11b": 0.923814,
+                            "test_correlation": 0.929039
+                        },
+                        "time_elapsed": "8 minutes and 48 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(min(sqrt(min(min(m_1, m_2), m_2)), m_1), min(m_2, sub(m_2, m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 11b": 0.851965,
+                            "best_fitness": 0.863621
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 11b": 0.8656,
+                            "test_correlation": 0.864915
+                        },
+                        "time_elapsed": "5 minutes and 31 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sub(m_2, sub(sub(exp(m_2), min(m_2, sub(m_1, m_2))), -0.7918291417837744))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 11b": 0.798877,
+                            "best_fitness": 0.816675
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 11b": 0.818159,
+                            "test_correlation": 0.834541
+                        },
+                        "time_elapsed": "1 hour, 44 minutes, and 12 seconds"
+                    }
+                },
+                "timestamp": "2025-07-07T17:16:14.654438"
+            },
+            {
+                "parameters": {
+                    "population_size": 20,
+                    "num_generations": 20,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "min(m_2, m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 11b": 0.836576,
+                            "best_fitness": 0.865212
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 11b": 0.840115,
+                            "test_correlation": 0.865187
+                        },
+                        "time_elapsed": "6 minutes and 8 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(sub(sub(m_1, min(m_2, 0.9871260762368705)), m_2), 0.03396929391954151)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 11b": 0.820384,
+                            "best_fitness": 0.829
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 11b": 0.582589,
+                            "test_correlation": 0.588592
+                        },
+                        "time_elapsed": "1 minute and 22 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "exp(sub(min(sub(-0.9054588731824211, m_2), -0.8425548796299767), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 11b": 0.873847,
+                            "best_fitness": 0.873889
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 11b": 0.886978,
+                            "test_correlation": 0.886406
+                        },
+                        "time_elapsed": "1 minute and 3 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sub(max(m_1, m_1), exp(exp(m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 11b": 0.836929,
+                            "best_fitness": 0.843805
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 11b": 0.887414,
+                            "test_correlation": 0.890052
+                        },
+                        "time_elapsed": "1 minute and 5 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sin(sub(m_2, 0.982533681902434))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 11b": 0.874595,
+                            "best_fitness": 0.874698
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 11b": 0.923814,
+                            "test_correlation": 0.923808
+                        },
+                        "time_elapsed": "1 minute and 41 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(sub(max(log(m_1), add(-0.1372407170354668, m_2)), m_1), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 11b": 0.851965,
+                            "best_fitness": 0.86243
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 11b": 0.8656,
+                            "test_correlation": 0.867341
+                        },
+                        "time_elapsed": "3 minutes and 31 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "min(m_2, m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 11b": 0.798877,
+                            "best_fitness": 0.812577
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 11b": 0.818159,
+                            "test_correlation": 0.832851
+                        },
+                        "time_elapsed": "4 minutes and 34 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T13:00:39.084211"
+            },
+            {
+                "parameters": {
+                    "population_size": 10,
+                    "num_generations": 10,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "min(m_1, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 11b": 0.836576,
+                            "best_fitness": 0.865212
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 11b": 0.840115,
+                            "test_correlation": 0.865187
+                        },
+                        "time_elapsed": "1 minute and 36 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sin(sqrt(mul(m_2, sqrt(mul(sin(m_2), sin(m_1))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 11b": 0.820384,
+                            "best_fitness": 0.82506
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 11b": 0.582589,
+                            "test_correlation": 0.584973
+                        },
+                        "time_elapsed": "25 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "max(sqrt(exp(sin(exp(sin(m_2))))), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 11b": 0.873847,
+                            "best_fitness": 0.873925
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 11b": 0.886978,
+                            "test_correlation": 0.886817
+                        },
+                        "time_elapsed": "18 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "div(exp(mul(cos(add(m_2, sqrt(sin(m_1)))), sqrt(sub(cos(-0.30254906272415805), m_2)))), 0.3929101565061788)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 11b": 0.836929,
+                            "best_fitness": 0.843779
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 11b": 0.887414,
+                            "test_correlation": 0.886967
+                        },
+                        "time_elapsed": "3 minutes and 11 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "add(exp(exp(m_2)), sin(sin(-0.5349491499487349)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 11b": 0.874595,
+                            "best_fitness": 0.87475
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 11b": 0.923814,
+                            "test_correlation": 0.923845
+                        },
+                        "time_elapsed": "18 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(max(sub(m_2, 0.9091213698595475), div(m_2, add(0.48166845725892204, m_1))), cos(exp(exp(m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 11b": 0.851965,
+                            "best_fitness": 0.862032
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 11b": 0.8656,
+                            "test_correlation": 0.866349
+                        },
+                        "time_elapsed": "6 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "cos(sqrt(sub(sin(mean(m_1)), exp(add(m_2, m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 11b": 0.798877,
+                            "best_fitness": 0.811798
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 11b": 0.818159,
+                            "test_correlation": 0.832763
+                        },
+                        "time_elapsed": "3 minutes and 38 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T17:00:32.732859"
+            },
+            {
+                "parameters": {
+                    "population_size": 100,
+                    "num_generations": 100,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(max(m_1, 0.0032711402146627933), max(sub(m_1, m_2), sin(m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 11b": 0.836576,
+                            "best_fitness": 0.86813
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 11b": 0.840115,
+                            "test_correlation": 0.865569
+                        },
+                        "time_elapsed": "10 hours, 12 minutes, and 19 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "min(add(-0.011160474565998113, m_2), min(sub(m_1, mul(min(-0.03563015021448512, m_1), 0.38727978314439016)), sin(m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 11b": 0.820384,
+                            "best_fitness": 0.828558
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 11b": 0.582589,
+                            "test_correlation": 0.583533
+                        },
+                        "time_elapsed": "55 minutes and 42 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(mul(m_2, exp(m_2)), add(sub(m_2, m_1), add(log(0.9458277664103181), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 11b": 0.873847,
+                            "best_fitness": 0.877629
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 11b": 0.886978,
+                            "test_correlation": 0.887159
+                        },
+                        "time_elapsed": "14 minutes and 4 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "min(m_2, mul(m_1, min(-0.3406331938572682, -0.4511606540951476)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 11b": 0.836929,
+                            "best_fitness": 0.846774
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 11b": 0.887414,
+                            "test_correlation": 0.882601
+                        },
+                        "time_elapsed": "3 hours, 19 minutes, and 39 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "exp(sin(sin(add(add(m_2, m_2), sin(add(add(m_1, -0.43589357435835385), m_2))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 11b": 0.874595,
+                            "best_fitness": 0.877345
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 11b": 0.923814,
+                            "test_correlation": 0.929843
+                        },
+                        "time_elapsed": "33 minutes and 53 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(inv(log(min(m_2, add(m_1, m_2)))), min(m_2, add(add(m_1, m_2), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 11b": 0.851965,
+                            "best_fitness": 0.866079
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 11b": 0.8656,
+                            "test_correlation": 0.865555
+                        },
+                        "time_elapsed": "22 minutes and 32 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "min(m_2, div(mul(sub(m_1, m_2), cos(sub(cos(cos(0.7095012233436668)), m_2))), cos(m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 11b": 0.798877,
+                            "best_fitness": 0.815185
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 11b": 0.818159,
+                            "test_correlation": 0.834279
+                        },
+                        "time_elapsed": "6 hours, 16 minutes, and 54 seconds"
+                    }
+                },
+                "timestamp": "2025-07-09T22:54:16.538380"
+            }
+        ]
+    },
+    {
+        "model_combination": {
+            "m_1": "SimCSE RoBERTa base",
+            "m_2": "Batch size (1000) T5 3b"
+        },
+        "experiments": [
+            {
+                "parameters": {
+                    "population_size": 50,
+                    "num_generations": 50,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "add(min(0.1285885374535638, m_2), sin(sin(sin(min(sin(sin(m_1)), m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (1000) T5 3b": 0.829757,
+                            "best_fitness": 0.864511
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (1000) T5 3b": 0.839248,
+                            "test_correlation": 0.866202
+                        },
+                        "time_elapsed": "18 minutes and 41 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "max(m_2, min(mul(m_1, add(log(mul(add(0.2808263551011396, m_2), sqrt(-0.7132668858241029))), m_2)), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (1000) T5 3b": 0.820353,
+                            "best_fitness": 0.831424
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (1000) T5 3b": 0.57428,
+                            "test_correlation": 0.575976
+                        },
+                        "time_elapsed": "14 minutes and 2 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(sin(add(max(add(m_1, m_1), sqrt(-0.9995981641781178)), exp(m_1))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (1000) T5 3b": 0.870559,
+                            "best_fitness": 0.875088
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (1000) T5 3b": 0.888855,
+                            "test_correlation": 0.889317
+                        },
+                        "time_elapsed": "13 minutes and 1 second"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sin(sin(add(m_2, div(add(m_1, add(0.21513772622162564, m_2)), cos(0.21513772622162564)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (1000) T5 3b": 0.825092,
+                            "best_fitness": 0.837919
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (1000) T5 3b": 0.885071,
+                            "test_correlation": 0.886561
+                        },
+                        "time_elapsed": "7 minutes and 12 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "max(m_1, add(m_1, div(add(m_2, m_2), sqrt(add(m_2, add(m_2, m_2))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (1000) T5 3b": 0.872794,
+                            "best_fitness": 0.879017
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (1000) T5 3b": 0.917509,
+                            "test_correlation": 0.923212
+                        },
+                        "time_elapsed": "9 minutes and 27 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(max(m_2, m_2), mul(max(m_1, m_2), add(cos(0.8534664089835384), max(m_2, cos(m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (1000) T5 3b": 0.856174,
+                            "best_fitness": 0.866381
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (1000) T5 3b": 0.873899,
+                            "test_correlation": 0.872222
+                        },
+                        "time_elapsed": "5 minutes and 16 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "min(max(m_1, max(m_1, add(m_2, m_2))), max(sin(sin(sin(m_1))), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (1000) T5 3b": 0.794739,
+                            "best_fitness": 0.810928
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (1000) T5 3b": 0.811722,
+                            "test_correlation": 0.831169
+                        },
+                        "time_elapsed": "54 minutes and 6 seconds"
+                    }
+                },
+                "timestamp": "2025-07-07T19:18:04.325409"
+            },
+            {
+                "parameters": {
+                    "population_size": 20,
+                    "num_generations": 20,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "add(add(m_2, m_1), add(add(m_2, m_1), add(m_2, m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (1000) T5 3b": 0.829757,
+                            "best_fitness": 0.864503
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (1000) T5 3b": 0.839248,
+                            "test_correlation": 0.866203
+                        },
+                        "time_elapsed": "1 minute and 43 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(add(exp(m_1), m_2), add(-0.9044511948340392, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (1000) T5 3b": 0.820353,
+                            "best_fitness": 0.828484
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (1000) T5 3b": 0.57428,
+                            "test_correlation": 0.578125
+                        },
+                        "time_elapsed": "2 minutes and 42 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "exp(add(add(m_2, sub(m_2, m_1)), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (1000) T5 3b": 0.870559,
+                            "best_fitness": 0.874767
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (1000) T5 3b": 0.888855,
+                            "test_correlation": 0.889099
+                        },
+                        "time_elapsed": "56 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "mul(div(sqrt(m_1), exp(sub(sub(m_2, m_1), add(0.44531520804471625, m_1)))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (1000) T5 3b": 0.825092,
+                            "best_fitness": 0.83358
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (1000) T5 3b": 0.885071,
+                            "test_correlation": 0.884394
+                        },
+                        "time_elapsed": "2 minutes and 7 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sub(min(sqrt(0.6558445746845889), mean(m_1)), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (1000) T5 3b": 0.872794,
+                            "best_fitness": 0.873161
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (1000) T5 3b": 0.917509,
+                            "test_correlation": 0.917646
+                        },
+                        "time_elapsed": "3 minutes and 44 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "sub(exp(exp(max(min(m_2, m_2), m_2))), exp(max(min(m_1, m_1), -0.3665559409947252)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (1000) T5 3b": 0.856174,
+                            "best_fitness": 0.861825
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (1000) T5 3b": 0.873899,
+                            "test_correlation": 0.873514
+                        },
+                        "time_elapsed": "51 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "min(m_2, inv(div(0.970034945206558, min(add(min(m_1, -0.8242520949662377), max(m_2, m_1)), m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (1000) T5 3b": 0.794739,
+                            "best_fitness": 0.808784
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (1000) T5 3b": 0.811722,
+                            "test_correlation": 0.829854
+                        },
+                        "time_elapsed": "6 minutes and 59 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T13:19:45.889179"
+            },
+            {
+                "parameters": {
+                    "population_size": 10,
+                    "num_generations": 10,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "mul(m_2, m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (1000) T5 3b": 0.829757,
+                            "best_fitness": 0.85957
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (1000) T5 3b": 0.839248,
+                            "test_correlation": 0.860658
+                        },
+                        "time_elapsed": "1 minute and 8 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "mul(m_2, exp(add(m_1, m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (1000) T5 3b": 0.820353,
+                            "best_fitness": 0.820863
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (1000) T5 3b": 0.57428,
+                            "test_correlation": 0.573194
+                        },
+                        "time_elapsed": "51 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "cos(add(sub(m_2, sub(m_1, max(m_1, m_2))), -0.27409618742794617))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (1000) T5 3b": 0.870559,
+                            "best_fitness": 0.874187
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (1000) T5 3b": 0.888855,
+                            "test_correlation": 0.888637
+                        },
+                        "time_elapsed": "16 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "max(cos(add(max(sub(0.5587184667374376, m_1), log(m_1)), inv(log(m_2)))), sin(div(m_2, sub(cos(m_1), -0.6715011426801436))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (1000) T5 3b": 0.825092,
+                            "best_fitness": 0.834534
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (1000) T5 3b": 0.885071,
+                            "test_correlation": 0.884021
+                        },
+                        "time_elapsed": "36 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "mul(0.09201575608499768, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (1000) T5 3b": 0.872794,
+                            "best_fitness": 0.872794
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (1000) T5 3b": 0.917509,
+                            "test_correlation": 0.917509
+                        },
+                        "time_elapsed": "9 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "sub(inv(add(sub(0.8034378113302381, add(mul(m_1, 0.8544567363683981), mul(m_2, m_1))), m_2)), sin(mul(m_1, m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (1000) T5 3b": 0.856174,
+                            "best_fitness": 0.859259
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (1000) T5 3b": 0.873899,
+                            "test_correlation": 0.858751
+                        },
+                        "time_elapsed": "7 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(m_1, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (1000) T5 3b": 0.794739,
+                            "best_fitness": 0.808586
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (1000) T5 3b": 0.811722,
+                            "test_correlation": 0.82993
+                        },
+                        "time_elapsed": "1 minute and 5 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T17:04:47.568214"
+            },
+            {
+                "parameters": {
+                    "population_size": 100,
+                    "num_generations": 100,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "add(min(m_1, mul(add(mul(m_1, cos(-0.6268014009575578)), mul(m_1, cos(m_1))), 0.45997234385798413)), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Batch size (1000) T5 3b": 0.829757,
+                            "best_fitness": 0.864688
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Batch size (1000) T5 3b": 0.839248,
+                            "test_correlation": 0.866322
+                        },
+                        "time_elapsed": "1 hour, 36 minutes, and 47 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "max(div(m_2, max(sin(div(sqrt(m_1), max(0.46467272855841624, sin(m_1)))), sqrt(m_2))), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Batch size (1000) T5 3b": 0.820353,
+                            "best_fitness": 0.830301
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Batch size (1000) T5 3b": 0.57428,
+                            "test_correlation": 0.568507
+                        },
+                        "time_elapsed": "1 hour, 4 minutes, and 2 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(sub(add(mul(log(-0.5416463180454523), m_2), mul(m_2, m_2)), -0.5416463180454523), mul(m_1, 0.25063151525608385))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Batch size (1000) T5 3b": 0.870559,
+                            "best_fitness": 0.875263
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Batch size (1000) T5 3b": 0.888855,
+                            "test_correlation": 0.890195
+                        },
+                        "time_elapsed": "22 minutes and 26 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(add(add(m_1, m_2), max(m_1, add(max(mul(m_2, 0.9324223865993786), m_1), m_2))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Batch size (1000) T5 3b": 0.825092,
+                            "best_fitness": 0.838476
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Batch size (1000) T5 3b": 0.885071,
+                            "test_correlation": 0.886743
+                        },
+                        "time_elapsed": "46 minutes and 48 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "min(max(m_1, m_2), sub(exp(m_2), cos(max(m_2, sqrt(m_2)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Batch size (1000) T5 3b": 0.872794,
+                            "best_fitness": 0.875496
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Batch size (1000) T5 3b": 0.917509,
+                            "test_correlation": 0.919699
+                        },
+                        "time_elapsed": "43 minutes and 12 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(max(m_2, m_1), mul(0.5383205197836363, max(sub(max(m_2, m_1), m_1), add(m_2, 0.012478307946222511))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Batch size (1000) T5 3b": 0.856174,
+                            "best_fitness": 0.866955
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Batch size (1000) T5 3b": 0.873899,
+                            "test_correlation": 0.868374
+                        },
+                        "time_elapsed": "19 minutes and 18 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sub(mul(add(m_2, m_1), sqrt(sqrt(m_2))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Batch size (1000) T5 3b": 0.794739,
+                            "best_fitness": 0.8114
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Batch size (1000) T5 3b": 0.811722,
+                            "test_correlation": 0.828403
+                        },
+                        "time_elapsed": "5 hours, 9 minutes, and 29 seconds"
+                    }
+                },
+                "timestamp": "2025-07-10T08:56:21.318789"
+            }
+        ]
+    },
+    {
+        "model_combination": {
+            "m_1": "SimCSE RoBERTa base",
+            "m_2": "Single T5 3b"
+        },
+        "experiments": [
+            {
+                "parameters": {
+                    "population_size": 50,
+                    "num_generations": 50,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "add(sub(m_2, mul(sub(m_1, add(m_2, m_2)), add(m_2, add(m_2, m_2)))), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 3b": 0.829764,
+                            "best_fitness": 0.865639
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 3b": 0.839351,
+                            "test_correlation": 0.866827
+                        },
+                        "time_elapsed": "25 minutes and 44 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "max(min(m_1, min(0.8596854621392054, div(m_1, log(m_2)))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 3b": 0.820359,
+                            "best_fitness": 0.829474
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 3b": 0.574353,
+                            "test_correlation": 0.575342
+                        },
+                        "time_elapsed": "18 minutes and 10 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(add(m_2, max(add(m_2, add(m_2, sin(m_2))), m_2)), sin(sin(m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 3b": 0.87055,
+                            "best_fitness": 0.875713
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 3b": 0.888663,
+                            "test_correlation": 0.890348
+                        },
+                        "time_elapsed": "4 minutes and 39 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(m_2, max(max(m_1, sub(sin(m_1), m_2)), sub(m_1, sub(m_1, m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 3b": 0.825113,
+                            "best_fitness": 0.83787
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 3b": 0.885043,
+                            "test_correlation": 0.884511
+                        },
+                        "time_elapsed": "13 minutes and 20 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "add(max(add(add(m_2, m_2), m_2), m_2), add(m_2, m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 3b": 0.872847,
+                            "best_fitness": 0.87714
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 3b": 0.917469,
+                            "test_correlation": 0.925055
+                        },
+                        "time_elapsed": "4 minutes and 54 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(add(max(m_1, m_2), add(max(m_1, m_2), sin(mean(m_1)))), max(m_2, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 3b": 0.856193,
+                            "best_fitness": 0.866748
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 3b": 0.873696,
+                            "test_correlation": 0.871479
+                        },
+                        "time_elapsed": "22 minutes and 42 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sub(mul(0.04310201465358654, m_2), sub(m_1, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 3b": 0.794706,
+                            "best_fitness": 0.810559
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 3b": 0.811741,
+                            "test_correlation": 0.828528
+                        },
+                        "time_elapsed": "1 hour, 20 minutes, and 48 seconds"
+                    }
+                },
+                "timestamp": "2025-07-07T22:08:26.163955"
+            },
+            {
+                "parameters": {
+                    "population_size": 20,
+                    "num_generations": 20,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "cos(exp(exp(min(m_1, m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 3b": 0.829764,
+                            "best_fitness": 0.864183
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 3b": 0.839351,
+                            "test_correlation": 0.863629
+                        },
+                        "time_elapsed": "6 minutes and 18 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(cos(add(add(m_2, m_2), m_2)), cos(add(-0.4813264074392021, min(m_1, m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 3b": 0.820359,
+                            "best_fitness": 0.828238
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 3b": 0.574353,
+                            "test_correlation": 0.58603
+                        },
+                        "time_elapsed": "1 minute and 24 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "max(inv(inv(exp(m_2))), sub(max(0.8530468139055871, exp(exp(m_2))), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 3b": 0.87055,
+                            "best_fitness": 0.875318
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 3b": 0.888663,
+                            "test_correlation": 0.889261
+                        },
+                        "time_elapsed": "3 minutes and 37 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sin(sub(m_2, log(add(sqrt(0.8495021408447447), mul(-0.6264688981713089, m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 3b": 0.825113,
+                            "best_fitness": 0.836591
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 3b": 0.885043,
+                            "test_correlation": 0.882226
+                        },
+                        "time_elapsed": "11 minutes and 3 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sub(mean(sub(mul(m_1, 0.8905416993660005), m_2)), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 3b": 0.872847,
+                            "best_fitness": 0.873376
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 3b": 0.917469,
+                            "test_correlation": 0.917348
+                        },
+                        "time_elapsed": "7 minutes and 34 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "max(m_2, min(add(m_2, m_1), max(m_1, -0.29304396025133617)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 3b": 0.856193,
+                            "best_fitness": 0.864178
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 3b": 0.873696,
+                            "test_correlation": 0.868737
+                        },
+                        "time_elapsed": "1 minute and 19 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(m_1, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 3b": 0.794706,
+                            "best_fitness": 0.808581
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 3b": 0.811741,
+                            "test_correlation": 0.829922
+                        },
+                        "time_elapsed": "4 minutes and 42 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T13:55:46.458346"
+            },
+            {
+                "parameters": {
+                    "population_size": 10,
+                    "num_generations": 10,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "exp(inv(min(max(exp(m_2), -0.40758704144843616), sub(-0.40758704144843616, mul(m_2, m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 3b": 0.829764,
+                            "best_fitness": 0.860471
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 3b": 0.839351,
+                            "test_correlation": 0.861142
+                        },
+                        "time_elapsed": "1 minute and 38 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "min(sub(sqrt(-0.26767570394403273), sqrt(m_2)), max(m_2, max(max(m_1, max(m_2, -0.3811079366278207)), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 3b": 0.820359,
+                            "best_fitness": 0.822424
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 3b": 0.574353,
+                            "test_correlation": 0.568547
+                        },
+                        "time_elapsed": "37 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "exp(mul(m_2, 0.36109057528159294))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 3b": 0.87055,
+                            "best_fitness": 0.870646
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 3b": 0.888663,
+                            "test_correlation": 0.888589
+                        },
+                        "time_elapsed": "13 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "max(log(sin(sqrt(-0.7235678107070651))), mul(min(-0.7235678107070651, log(m_1)), sin(mul(sin(m_2), exp(m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 3b": 0.825113,
+                            "best_fitness": 0.830528
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 3b": 0.885043,
+                            "test_correlation": 0.886157
+                        },
+                        "time_elapsed": "1 minute and 11 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "m_2",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 3b": 0.872847,
+                            "best_fitness": 0.872847
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 3b": 0.917469,
+                            "test_correlation": 0.917469
+                        },
+                        "time_elapsed": "47 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "cos(sin(add(m_2, -0.1926237939817257)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 3b": 0.856193,
+                            "best_fitness": 0.856221
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 3b": 0.873696,
+                            "test_correlation": 0.874318
+                        },
+                        "time_elapsed": "23 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "min(m_1, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 3b": 0.794706,
+                            "best_fitness": 0.80677
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 3b": 0.811741,
+                            "test_correlation": 0.826906
+                        },
+                        "time_elapsed": "1 minute and 9 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T17:10:50.294606"
+            },
+            {
+                "parameters": {
+                    "population_size": 100,
+                    "num_generations": 100,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "mul(add(m_1, sin(div(m_2, 0.8573485635584894))), exp(div(exp(m_2), add(sqrt(0.21080287203557413), m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "Single T5 3b": 0.829764,
+                            "best_fitness": 0.865041
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "Single T5 3b": 0.839351,
+                            "test_correlation": 0.865694
+                        },
+                        "time_elapsed": "1 hour, 3 minutes, and 6 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sub(min(m_1, sub(m_1, m_2)), min(m_2, m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "Single T5 3b": 0.820359,
+                            "best_fitness": 0.829466
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "Single T5 3b": 0.574353,
+                            "test_correlation": 0.586069
+                        },
+                        "time_elapsed": "25 minutes and 54 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(min(max(m_1, m_2), sub(sub(sqrt(m_2), m_2), min(sqrt(m_2), 0.06776029811971984))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "Single T5 3b": 0.87055,
+                            "best_fitness": 0.875229
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "Single T5 3b": 0.888663,
+                            "test_correlation": 0.889394
+                        },
+                        "time_elapsed": "24 minutes and 13 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(sin(add(max(m_2, m_1), mul(sin(m_2), exp(inv(cos(m_1)))))), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "Single T5 3b": 0.825113,
+                            "best_fitness": 0.838095
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "Single T5 3b": 0.885043,
+                            "test_correlation": 0.887901
+                        },
+                        "time_elapsed": "20 minutes and 58 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sub(m_1, mul(mul(m_2, add(sub(m_2, m_1), exp(max(m_1, m_2)))), log(m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "Single T5 3b": 0.872847,
+                            "best_fitness": 0.878063
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "Single T5 3b": 0.917469,
+                            "test_correlation": 0.925992
+                        },
+                        "time_elapsed": "46 minutes and 27 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "max(add(max(m_1, m_2), m_1), add(add(max(m_1, m_2), add(m_2, m_2)), 0.0461179791660582))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "Single T5 3b": 0.856193,
+                            "best_fitness": 0.866273
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "Single T5 3b": 0.873696,
+                            "test_correlation": 0.872889
+                        },
+                        "time_elapsed": "20 minutes and 34 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "max(m_2, mul(add(m_1, add(add(m_2, add(-0.5912094735512383, sin(m_1))), m_2)), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "Single T5 3b": 0.794706,
+                            "best_fitness": 0.81228
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "Single T5 3b": 0.811741,
+                            "test_correlation": 0.829901
+                        },
+                        "time_elapsed": "1 hour, 40 minutes, and 57 seconds"
+                    }
+                },
+                "timestamp": "2025-07-10T13:58:34.279059"
+            }
+        ]
+    },
+    {
+        "model_combination": {
+            "m_1": "SimCSE RoBERTa base",
+            "m_2": "T5 base"
+        },
+        "experiments": [
+            {
+                "parameters": {
+                    "population_size": 50,
+                    "num_generations": 50,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "min(sub(m_2, m_1), min(add(m_2, add(add(0.23081643418423692, m_2), m_2)), add(m_2, m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 base": 0.844771,
+                            "best_fitness": 0.862893
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 base": 0.855222,
+                            "test_correlation": 0.867496
+                        },
+                        "time_elapsed": "31 minutes and 22 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "max(sub(m_1, div(m_1, div(0.10149016001063837, max(sub(sub(m_1, m_2), m_2), m_2)))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 base": 0.80728,
+                            "best_fitness": 0.819864
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 base": 0.563403,
+                            "test_correlation": 0.570428
+                        },
+                        "time_elapsed": "12 minutes and 36 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "sub(sub(add(m_2, m_2), 0.712453154194588), max(m_1, m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 base": 0.841066,
+                            "best_fitness": 0.851747
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 base": 0.866973,
+                            "test_correlation": 0.875139
+                        },
+                        "time_elapsed": "3 minutes and 32 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "min(m_2, sub(m_2, sub(sin(sin(0.15867044500414917)), sub(m_2, m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 base": 0.805477,
+                            "best_fitness": 0.821889
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 base": 0.863524,
+                            "test_correlation": 0.864065
+                        },
+                        "time_elapsed": "11 minutes and 28 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "add(-0.35782889800040407, add(add(sqrt(m_2), add(log(cos(m_1)), m_2)), add(m_1, mean(m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 base": 0.850493,
+                            "best_fitness": 0.858507
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 base": 0.920917,
+                            "test_correlation": 0.926286
+                        },
+                        "time_elapsed": "21 minutes"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "sqrt(max(add(0.0663735618393051, m_1), add(max(add(m_1, sqrt(m_2)), m_2), sqrt(exp(m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 base": 0.842535,
+                            "best_fitness": 0.850968
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 base": 0.872128,
+                            "test_correlation": 0.864649
+                        },
+                        "time_elapsed": "16 minutes"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(exp(exp(exp(min(exp(inv(m_2)), add(m_1, m_2))))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 base": 0.794917,
+                            "best_fitness": 0.806842
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 base": 0.817714,
+                            "test_correlation": 0.826502
+                        },
+                        "time_elapsed": "38 minutes and 55 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T00:23:23.244789"
+            },
+            {
+                "parameters": {
+                    "population_size": 20,
+                    "num_generations": 20,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "sub(m_2, min(sin(cos(add(m_2, add(-0.2466465023685176, m_1)))), add(mul(m_1, -0.2466465023685176), m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 base": 0.844771,
+                            "best_fitness": 0.862194
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 base": 0.855222,
+                            "test_correlation": 0.866608
+                        },
+                        "time_elapsed": "6 minutes and 6 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sqrt(mul(m_2, mul(sub(m_2, min(exp(m_2), sin(m_1))), sqrt(exp(0.6720650973303881)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 base": 0.80728,
+                            "best_fitness": 0.815972
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 base": 0.563403,
+                            "test_correlation": 0.574661
+                        },
+                        "time_elapsed": "6 minutes and 32 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "max(sqrt(exp(m_1)), exp(m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 base": 0.841066,
+                            "best_fitness": 0.852279
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 base": 0.866973,
+                            "test_correlation": 0.871427
+                        },
+                        "time_elapsed": "50 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sub(m_1, mul(add(-0.43825631243473806, m_2), exp(sin(exp(-0.43825631243473806)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 base": 0.805477,
+                            "best_fitness": 0.820757
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 base": 0.863524,
+                            "test_correlation": 0.863661
+                        },
+                        "time_elapsed": "9 minutes and 50 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sin(sin(sub(sqrt(m_2), add(m_1, 0.3535988245401851))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 base": 0.850493,
+                            "best_fitness": 0.852969
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 base": 0.920917,
+                            "test_correlation": 0.926155
+                        },
+                        "time_elapsed": "1 minute and 55 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "exp(sqrt(mul(log(inv(m_1)), mul(m_2, m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 base": 0.842535,
+                            "best_fitness": 0.851073
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 base": 0.872128,
+                            "test_correlation": 0.855469
+                        },
+                        "time_elapsed": "28 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "min(min(cos(m_1), m_2), mul(m_1, exp(log(-0.8173028546533201))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 base": 0.794917,
+                            "best_fitness": 0.805821
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 base": 0.817714,
+                            "test_correlation": 0.82741
+                        },
+                        "time_elapsed": "6 minutes and 56 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T14:28:27.447961"
+            },
+            {
+                "parameters": {
+                    "population_size": 10,
+                    "num_generations": 10,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "max(mul(m_1, -0.7411882243397767), max(-0.19846995838492143, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 base": 0.844771,
+                            "best_fitness": 0.85955
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 base": 0.855222,
+                            "test_correlation": 0.865431
+                        },
+                        "time_elapsed": "1 minute and 31 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sub(sub(max(m_1, m_2), max(m_1, mul(m_2, 0.16605903757986407))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 base": 0.80728,
+                            "best_fitness": 0.81553
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 base": 0.563403,
+                            "test_correlation": 0.564172
+                        },
+                        "time_elapsed": "42 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "exp(mul(exp(m_2), cos(mul(exp(m_2), cos(m_1)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 base": 0.841066,
+                            "best_fitness": 0.843157
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 base": 0.866973,
+                            "test_correlation": 0.865824
+                        },
+                        "time_elapsed": "9 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sub(sin(m_2), sqrt(exp(max(m_1, m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 base": 0.805477,
+                            "best_fitness": 0.820297
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 base": 0.863524,
+                            "test_correlation": 0.864334
+                        },
+                        "time_elapsed": "21 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sin(max(sin(m_2), max(m_2, m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 base": 0.850493,
+                            "best_fitness": 0.850492
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 base": 0.920917,
+                            "test_correlation": 0.920897
+                        },
+                        "time_elapsed": "37 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(add(m_2, -0.5370294204868171), cos(sqrt(m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 base": 0.842535,
+                            "best_fitness": 0.849763
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 base": 0.872128,
+                            "test_correlation": 0.873826
+                        },
+                        "time_elapsed": "32 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sub(sub(-0.6091524276277216, sqrt(add(m_1, 0.8453060958899477))), add(m_2, 0.7939991628139706))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 base": 0.794917,
+                            "best_fitness": 0.805481
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 base": 0.817714,
+                            "test_correlation": 0.827218
+                        },
+                        "time_elapsed": "2 minutes and 43 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T17:17:29.674221"
+            },
+            {
+                "parameters": {
+                    "population_size": 100,
+                    "num_generations": 100,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "min(min(min(add(m_2, m_1), m_2), m_2), sub(m_2, min(add(m_2, m_2), m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 base": 0.844771,
+                            "best_fitness": 0.863609
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 base": 0.855222,
+                            "test_correlation": 0.867386
+                        },
+                        "time_elapsed": "2 hours, 24 minutes, and 3 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "max(m_2, sin(sqrt(max(m_1, max(sin(add(m_2, 0.04324831860981759)), add(m_2, sin(m_2)))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 base": 0.80728,
+                            "best_fitness": 0.821361
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 base": 0.563403,
+                            "test_correlation": 0.566386
+                        },
+                        "time_elapsed": "54 minutes and 37 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "cos(sub(m_1, sqrt(mul(m_1, sub(sub(-0.21124270914024668, m_1), div(m_2, m_1))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 base": 0.841066,
+                            "best_fitness": 0.852463
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 base": 0.866973,
+                            "test_correlation": 0.86852
+                        },
+                        "time_elapsed": "1 hour, 23 minutes, and 2 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(sub(m_2, exp(m_1)), max(sub(m_2, mean(min(-0.9337911554262726, m_1))), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 base": 0.805477,
+                            "best_fitness": 0.822514
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 base": 0.863524,
+                            "test_correlation": 0.863855
+                        },
+                        "time_elapsed": "1 hour, 8 minutes, and 4 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sin(sub(add(sub(sub(m_2, 0.05004968677365351), m_1), add(m_2, m_2)), 0.05004968677365351))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 base": 0.850493,
+                            "best_fitness": 0.856653
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 base": 0.920917,
+                            "test_correlation": 0.928345
+                        },
+                        "time_elapsed": "18 minutes and 51 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "max(m_1, add(add(mean(add(m_1, add(m_1, m_1))), m_2), m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 base": 0.842535,
+                            "best_fitness": 0.854689
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 base": 0.872128,
+                            "test_correlation": 0.867083
+                        },
+                        "time_elapsed": "1 hour, 34 minutes, and 22 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(m_2, add(m_1, add(cos(m_1), cos(cos(add(sqrt(m_2), m_2))))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 base": 0.794917,
+                            "best_fitness": 0.806442
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 base": 0.817714,
+                            "test_correlation": 0.827852
+                        },
+                        "time_elapsed": "1 hour, 35 minutes, and 10 seconds"
+                    }
+                },
+                "timestamp": "2025-07-10T23:16:48.383579"
+            }
+        ]
+    },
+    {
+        "model_combination": {
+            "m_1": "SimCSE RoBERTa base",
+            "m_2": "T5 large"
+        },
+        "experiments": [
+            {
+                "parameters": {
+                    "population_size": 50,
+                    "num_generations": 50,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "min(sin(sin(sub(min(m_1, m_2), m_2))), min(sin(min(sin(m_2), m_1)), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 large": 0.833824,
+                            "best_fitness": 0.863041
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 large": 0.853606,
+                            "test_correlation": 0.867393
+                        },
+                        "time_elapsed": "22 minutes and 15 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "mul(sqrt(min(sqrt(min(m_1, sub(m_1, min(m_1, m_1)))), sub(m_1, m_2))), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 large": 0.81703,
+                            "best_fitness": 0.827535
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 large": 0.581429,
+                            "test_correlation": 0.581234
+                        },
+                        "time_elapsed": "9 minutes and 3 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "sub(mul(m_2, mul(max(sqrt(cos(log(m_2))), max(0.16595367512357084, 0.7255561930257814)), sqrt(m_1))), 0.11057452716276295)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 large": 0.85526,
+                            "best_fitness": 0.861938
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 large": 0.87653,
+                            "test_correlation": 0.873236
+                        },
+                        "time_elapsed": "4 minutes and 29 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "add(add(add(m_1, -0.36025111646342967), m_2), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 large": 0.814243,
+                            "best_fitness": 0.82847
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 large": 0.876796,
+                            "test_correlation": 0.877194
+                        },
+                        "time_elapsed": "9 minutes and 59 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sub(add(add(m_1, 0.8843365004880297), add(add(m_2, m_2), m_2)), sqrt(sqrt(sqrt(0.8843365004880297))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 large": 0.862197,
+                            "best_fitness": 0.864637
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 large": 0.920743,
+                            "test_correlation": 0.9277
+                        },
+                        "time_elapsed": "8 minutes and 11 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "sub(cos(m_2), sub(sub(sqrt(m_2), sub(sub(sub(m_1, m_2), 0.6800389533265792), m_2)), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 large": 0.851418,
+                            "best_fitness": 0.863655
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 large": 0.858315,
+                            "test_correlation": 0.863454
+                        },
+                        "time_elapsed": "2 minutes and 23 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sub(min(m_2, add(mul(m_2, 0.4188760437650878), add(m_2, -0.4705428449450515))), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 large": 0.79807,
+                            "best_fitness": 0.810306
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 large": 0.815726,
+                            "test_correlation": 0.829074
+                        },
+                        "time_elapsed": "50 minutes and 37 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T02:10:24.075304"
+            },
+            {
+                "parameters": {
+                    "population_size": 20,
+                    "num_generations": 20,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "max(log(m_2), sub(m_1, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 large": 0.833824,
+                            "best_fitness": 0.862062
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 large": 0.853606,
+                            "test_correlation": 0.866402
+                        },
+                        "time_elapsed": "3 minutes and 15 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "sub(m_1, add(m_2, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 large": 0.81703,
+                            "best_fitness": 0.824779
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 large": 0.581429,
+                            "test_correlation": 0.58236
+                        },
+                        "time_elapsed": "1 minute and 30 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "sqrt(div(max(0.6143653760408625, sqrt(add(inv(exp(m_1)), exp(m_2)))), exp(m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 large": 0.85526,
+                            "best_fitness": 0.860871
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 large": 0.87653,
+                            "test_correlation": 0.876317
+                        },
+                        "time_elapsed": "54 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "min(sub(log(0.4702400178241808), max(log(0.4702400178241808), add(add(exp(m_2), m_1), m_2))), exp(m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 large": 0.814243,
+                            "best_fitness": 0.828288
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 large": 0.876796,
+                            "test_correlation": 0.877759
+                        },
+                        "time_elapsed": "9 minutes and 56 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "mul(m_2, sub(sin(max(m_1, -0.5935951949098619)), max(add(m_2, -0.8738813756492307), sqrt(m_2))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 large": 0.862197,
+                            "best_fitness": 0.86387
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 large": 0.920743,
+                            "test_correlation": 0.920095
+                        },
+                        "time_elapsed": "2 minutes and 41 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "exp(sqrt(mul(sub(sub(m_1, sub(m_2, m_1)), 0.10227417405027062), m_2)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 large": 0.851418,
+                            "best_fitness": 0.861292
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 large": 0.858315,
+                            "test_correlation": 0.865341
+                        },
+                        "time_elapsed": "32 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sqrt(exp(add(m_1, sub(min(exp(m_2), cos(m_2)), add(m_2, m_2)))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 large": 0.79807,
+                            "best_fitness": 0.810825
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 large": 0.815726,
+                            "test_correlation": 0.829459
+                        },
+                        "time_elapsed": "4 minutes and 26 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T14:51:46.006921"
+            },
+            {
+                "parameters": {
+                    "population_size": 10,
+                    "num_generations": 10,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "min(m_2, m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 large": 0.833824,
+                            "best_fitness": 0.86212
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 large": 0.853606,
+                            "test_correlation": 0.867049
+                        },
+                        "time_elapsed": "2 minutes and 31 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "m_2",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 large": 0.81703,
+                            "best_fitness": 0.817033
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 large": 0.581429,
+                            "test_correlation": 0.581429
+                        },
+                        "time_elapsed": "32 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "min(sub(m_1, m_2), add(m_2, m_2))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 large": 0.85526,
+                            "best_fitness": 0.860109
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 large": 0.87653,
+                            "test_correlation": 0.87684
+                        },
+                        "time_elapsed": "15 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "mul(m_2, max(sub(m_1, 0.08794992585374373), sub(-0.9132796673419348, 0.08794992585374373)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 large": 0.814243,
+                            "best_fitness": 0.824896
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 large": 0.876796,
+                            "test_correlation": 0.880033
+                        },
+                        "time_elapsed": "43 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "sub(m_2, mul(m_1, add(m_1, m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 large": 0.862197,
+                            "best_fitness": 0.862755
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 large": 0.920743,
+                            "test_correlation": 0.92213
+                        },
+                        "time_elapsed": "31 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "max(m_2, add(max(m_2, exp(m_2)), add(max(m_2, exp(m_2)), sub(0.7047988941211396, m_1))))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 large": 0.851418,
+                            "best_fitness": 0.858757
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 large": 0.858315,
+                            "test_correlation": 0.86307
+                        },
+                        "time_elapsed": "12 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "add(m_1, m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 large": 0.79807,
+                            "best_fitness": 0.808065
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 large": 0.815726,
+                            "test_correlation": 0.829174
+                        },
+                        "time_elapsed": "1 minute and 49 seconds"
+                    }
+                },
+                "timestamp": "2025-07-08T17:24:05.133948"
+            },
+            {
+                "parameters": {
+                    "population_size": 100,
+                    "num_generations": 100,
+                    "crossover_probability": 0.7,
+                    "mutation_probability": 0.2,
+                    "size_penalty_coefficient": 0.0001
+                },
+                "results": {
+                    "stsb_dataset": {
+                        "best_expression": "mul(sub(m_2, m_1), sub(max(max(sqrt(0.027068266419156828), m_2), sqrt(sqrt(m_2))), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.853002,
+                            "T5 large": 0.833824,
+                            "best_fitness": 0.863621
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.856638,
+                            "T5 large": 0.853606,
+                            "test_correlation": 0.868393
+                        },
+                        "time_elapsed": "1 hour, 31 minutes, and 54 seconds"
+                    },
+                    "sts12_dataset": {
+                        "best_expression": "add(max(m_2, max(m_2, mul(m_1, m_2))), sub(m_2, max(mul(m_2, m_2), m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801522,
+                            "T5 large": 0.81703,
+                            "best_fitness": 0.825595
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.544717,
+                            "T5 large": 0.581429,
+                            "test_correlation": 0.582797
+                        },
+                        "time_elapsed": "36 minutes and 19 seconds"
+                    },
+                    "sts13_dataset": {
+                        "best_expression": "add(exp(sub(max(sin(exp(0.2945950717613657)), m_1), sub(sub(0.5543124592794082, m_2), 0.5221411690274034))), m_1)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.829721,
+                            "T5 large": 0.85526,
+                            "best_fitness": 0.861511
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.861916,
+                            "T5 large": 0.87653,
+                            "test_correlation": 0.876316
+                        },
+                        "time_elapsed": "19 minutes and 44 seconds"
+                    },
+                    "sts14_dataset": {
+                        "best_expression": "sub(add(mean(min(min(m_2, mean(sin(m_2))), m_1)), m_2), mul(0.5378758698368524, m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.801377,
+                            "T5 large": 0.814243,
+                            "best_fitness": 0.830259
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.843227,
+                            "T5 large": 0.876796,
+                            "test_correlation": 0.87867
+                        },
+                        "time_elapsed": "4 hours, 41 minutes, and 49 seconds"
+                    },
+                    "sts15_dataset": {
+                        "best_expression": "min(log(add(add(cos(cos(add(m_1, -0.37376703079700446))), 0.2938695200374275), m_2)), m_2)",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.82424,
+                            "T5 large": 0.862197,
+                            "best_fitness": 0.865742
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.924995,
+                            "T5 large": 0.920743,
+                            "test_correlation": 0.926241
+                        },
+                        "time_elapsed": "45 minutes and 27 seconds"
+                    },
+                    "sts16_dataset": {
+                        "best_expression": "add(max(m_1, m_2), sub(sub(sub(m_2, mul(m_2, sqrt(m_2))), 0.10749078110971855), m_1))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.837315,
+                            "T5 large": 0.851418,
+                            "best_fitness": 0.862343
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.820609,
+                            "T5 large": 0.858315,
+                            "test_correlation": 0.865822
+                        },
+                        "time_elapsed": "7 minutes and 44 seconds"
+                    },
+                    "sickr_dataset": {
+                        "best_expression": "sub(min(m_1, m_2), sub(cos(add(m_2, m_1)), sub(max(m_2, mean(m_1)), m_1)))",
+                        "train_metrics": {
+                            "SimCSE RoBERTa base": 0.80117,
+                            "T5 large": 0.79807,
+                            "best_fitness": 0.811525
+                        },
+                        "test_metrics": {
+                            "SimCSE RoBERTa base": 0.823088,
+                            "T5 large": 0.815726,
+                            "test_correlation": 0.827759
+                        },
+                        "time_elapsed": "9 hours, 53 minutes, and 23 seconds"
+                    }
+                },
+                "timestamp": "2025-07-11T17:13:11.314384"
+            }
+        ]
+    }
+]
