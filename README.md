@@ -152,14 +152,14 @@ with open("test model_test ds.pkl", "wb") as f:
   Example:
   ```
   ====================== Variables =======================
-                     Dataset = stsb
-             Model 1 = SimCSE RoBERTa base
-                   Model 2 = T5 large
-                   Model 3 = T5 base
-                  Population size = 50
-               Number of generations = 50
-              Crossover probability = 0.7
-               Mutation probability = 0.2
+                      Dataset = stsb
+              Model 1 = SimCSE RoBERTa base
+                    Model 2 = T5 large
+                    Model 3 = T5 base
+                   Population size = 50
+                Number of generations = 50
+               Crossover probability = 0.7
+                Mutation probability = 0.2
   ```
 - **JSON File** (`results.json`): Structured results with model combinations (order-independent), experiments, and metrics.
   Example snippet:
