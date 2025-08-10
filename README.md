@@ -164,46 +164,44 @@ with open("test model_test ds.pkl", "wb") as f:
 - **JSON File** (`results.json`): Structured results with model combinations (order-independent), experiments, and metrics.
   Example snippet:
   ```
-  [
-      [
-          {
-              "model_combination": {
-                  "m_1": "SimCSE RoBERTa base",
-                  "m_2": "T5 large"
-              },
-              "experiments": [
-                  {
-                      "parameters": {
-                          "population_size": 50,
-                          "num_generations": 50,
-                          "crossover_probability": 0.7,
-                          "mutation_probability": 0.2,
-                          "size_penalty_coefficient": 0.0001
-                      },
-                      "results": {
-                          "stsb_dataset": {
-                              "best_expression": "min(sin(sin(sub(min(m_1, m_2), m_2))), min(sin(min(sin(m_2), m_1)), m_1))",
-                              "train_metrics": {
-                                  "SimCSE RoBERTa base": 0.853002,
-                                  "T5 large": 0.833824,
-                                  "best_fitness": 0.863041
-                              },
-                              "test_metrics": {
-                                  "SimCSE RoBERTa base": 0.856638,
-                                  "T5 large": 0.853606,
-                                  "test_correlation": 0.867393
-                              },
-                              "time_elapsed": "22 minutes and 15 seconds"
-                          },
-                          ...
-                      }
-                  },
-                  ...
-              ]
-          },
-          ...
-      ]
-  ]
+   [
+       {
+           "model_combination": {
+               "m_1": "SimCSE RoBERTa base",
+               "m_2": "T5 large"
+           },
+           "experiments": [
+               {
+                   "parameters": {
+                       "population_size": 50,
+                       "num_generations": 50,
+                       "crossover_probability": 0.7,
+                       "mutation_probability": 0.2,
+                       "size_penalty_coefficient": 0.0001
+                   },
+                   "results": {
+                       "stsb_dataset": {
+                           "best_expression": "min(sin(sin(sub(min(m_1, m_2), m_2))), min(sin(min(sin(m_2), m_1)), m_1))",
+                           "train_metrics": {
+                               "SimCSE RoBERTa base": 0.853002,
+                               "T5 large": 0.833824,
+                               "best_fitness": 0.863041
+                           },
+                           "test_metrics": {
+                               "SimCSE RoBERTa base": 0.856638,
+                               "T5 large": 0.853606,
+                               "test_correlation": 0.867393
+                           },
+                           "time_elapsed": "22 minutes and 15 seconds"
+                       },
+                       ...
+                   }
+               },
+               ...
+           ]
+       },
+       ...
+   ]
   ```
 
 ## Requirements
