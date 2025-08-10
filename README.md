@@ -22,7 +22,6 @@ GMPES is a genetic programming-based tool for synthesizing optimal combinations 
    ```
    pip install numpy scipy scikit-learn sympy deap
    ```
-   Note: DEAP is the core library for genetic programming. No additional installations are needed for basic use.
 
 ## Usage
 The `GMPES` class can be imported and used in any Python script. It takes model embedding file paths and parameters, then runs optimization for a specified dataset.
