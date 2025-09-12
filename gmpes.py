@@ -54,7 +54,11 @@ def listdir_full(directory: Union[str, Path]) -> List[str]:
     return [os.path.join(directory, item) for item in os.listdir(directory)]
 
 
-def print_results_box(data, max_length=None, truncate_formula=False):
+def print_results_box(
+    data: dict[str, str | dict[str, int]],
+    width: int | None = None,
+    truncate_formula: bool = False,
+):
     """
     Prints a visually formatted results box with aligned metrics and formula display.
 
@@ -71,13 +75,13 @@ def print_results_box(data, max_length=None, truncate_formula=False):
             - train_metrics (dict): Metric names to values mapping for training
             - test_metrics (dict): Metric names to values mapping for testing
 
-        max_length (int, optional): Strict maximum character limit for formula display.
+        width (int, optional): Strict maximum character limit for formula display.
                                    Forces box width adjustment when specified.
                                    Values are clamped between 30-250 characters.
                                    Default: None (auto-sized based on content)
 
         truncate_formula (bool): When True and formula exceeds display space:
-                                - Truncates with "..." at max_length
+                                - Truncates with "..." at `width`
                                 When False:
                                 - Wraps to multiple lines while preserving alignment
                                 Default: False
@@ -94,8 +98,8 @@ def print_results_box(data, max_length=None, truncate_formula=False):
     if not data:
         return
 
-    train_metrics = data["train_metrics"]
-    test_metrics = data["test_metrics"]
+    train_metrics: dict[str, int] = data["train_metrics"]  # type:ignore
+    test_metrics: dict[str, int] = data["test_metrics"]  # type:ignore
 
     train_best = max(train_metrics.values())
     test_best = max(test_metrics.values())
@@ -131,17 +135,17 @@ def print_results_box(data, max_length=None, truncate_formula=False):
 
     required_content_width = max_value_len + 3
     min_width = 30
-    max_length = min(
-        max(required_content_width, max_length if max_length else 0), 250
+    width = max(
+        min(max(required_content_width, width if width else 0), 250), min_width
     )
 
-    if max_length is not None:
-        formula_required_width = max_label_len + max_length + 3
-        box_width = max(
-            min_width, required_content_width, formula_required_width
-        )
-    else:
-        box_width = max(min_width, required_content_width)
+    # if width is not None:
+    #     formula_required_width = max_label_len + width + 3
+    #     box_width = max(
+    #         min_width, required_content_width, formula_required_width
+    #     )
+    # else:
+    box_width = max(width, required_content_width)
 
     formula_available_width = box_width - max_label_len - 3
 
@@ -154,10 +158,10 @@ def print_results_box(data, max_length=None, truncate_formula=False):
     print(divider)
 
     label = "Best Formula:"
-    formula = data["best_expression"]
+    formula: str = data["best_expression"]  # type:ignore
 
-    if max_length is not None:
-        formula_available_width = min(formula_available_width, max_length)
+    if width is not None:
+        formula_available_width = min(formula_available_width, width)
 
     if truncate_formula and len(formula) > formula_available_width:
         truncated = formula[: formula_available_width - 3] + "..."
@@ -180,7 +184,7 @@ def print_results_box(data, max_length=None, truncate_formula=False):
     print(divider)
 
     print(f"│{'TRAINING METRICS'.center(box_width - 2)}│")
-    for model, score in train_metrics.items():
+    for model in train_metrics.keys():
         value = marked_train_metrics[model]
         print(
             f"│{model.ljust(max_label_len)} {value.rjust(box_width - max_label_len - 3)}│"
@@ -189,7 +193,7 @@ def print_results_box(data, max_length=None, truncate_formula=False):
     print(divider)
 
     print(f"│{'TESTING METRICS'.center(box_width - 2)}│")
-    for model, score in test_metrics.items():
+    for model in test_metrics.keys():
         value = marked_test_metrics[model]
         print(
             f"│{model.ljust(max_label_len)} {value.rjust(box_width - max_label_len - 3)}│"
@@ -198,7 +202,7 @@ def print_results_box(data, max_length=None, truncate_formula=False):
     print(divider)
 
     label = "Time Elapsed:"
-    time_str = data["time_elapsed"]
+    time_str: str = data["time_elapsed"]  # type:ignore
     time_lines = [
         time_str[i : i + box_width - max_label_len - 3]
         for i in range(0, len(time_str), box_width - max_label_len - 3)
@@ -360,6 +364,25 @@ class ResultSaver:
                         return ds_key in exp["results"]
         return False
 
+    def get_existing_result(
+        self, models: Dict[str, str], parameters: Dict, ds_key: str
+    ) -> Dict | None:
+        """Get existing result for a model combination and dataset."""
+        if not os.path.exists(self.filepath):
+            return None
+        with self._safe_writer("r") as f:  # type: ignore
+            data = json.load(f)
+
+        input_model_set = set(models.values())
+        for entry in data:
+            entry_model_set = set(entry["model_combination"].values())
+            if entry_model_set == input_model_set:
+                for _exp in entry["experiments"]:
+                    if _exp["parameters"] == parameters:
+                        if ds_key in _exp["results"]:
+                            return _exp["results"][ds_key]
+        return None
+
     def log_dataset(
         self,
         models: Dict[str, str],
@@ -415,7 +438,7 @@ class GMPES:
 
     Attributes:
         model_files (List[List[Union[str, Path]]]): List of file paths for each model's embeddings.
-        save_folder_path (str): Path to save results JSON file.
+        save_folder_path_name (str): Path to save results JSON file containing file name.
         population_size (int): Size of the genetic programming population.
         num_generations (int): Number of generations for genetic programming.
         crossover_probability (float): Probability of crossover in genetic programming.
@@ -455,15 +478,17 @@ class GMPES:
     def __init__(
         self,
         model_files_path: List[Union[str, Path]],
-        save_folder_path: Union[str, Path] = sys.path[0],
+        save_folder_path_name: Union[str, Path] = os.path.join(
+            sys.path[0], "Results", "results.json"
+        ),
         population_size: int = 50,
         num_generations: int = 50,
-        crossover_probability: float = 0.7,  # TODO: Change to: 0.8
-        mutation_probability: float = 0.2,  # TODO: Change to: 0.15
+        crossover_probability: float = 0.8,
+        mutation_probability: float = 0.15,
         tournsize: Optional[int] = None,
-        size_penalty_threshold: int = 15,  # TODO: Change to: 25
-        size_penalty_coefficient: float = 0.0001,  # TODO: Change to: 0.0005
-        max_depth: int = 7,  # TODO: Change to: 10
+        size_penalty_threshold: int = 25,
+        size_penalty_coefficient: float = 0.0005,
+        max_depth: int = 10,
         decimal: int = 6,
         line_length: int = 56,
         overwrite: bool = False,
@@ -475,25 +500,25 @@ class GMPES:
         Args:
             model_files_path (List[Union[str, Path]]): List of file path(s)
                 for each model's embeddings.
-            save_folder_path (Union[str, Path]): Path to save results JSON file.
+            save_folder_path_name (Union[str, Path]): Path to save results JSON file.
             population_size (int, optional): Size of the GP population. Defaults to 50.
             num_generations (int, optional): Number of GP generations. Defaults to 50.
-            crossover_probability (float, optional): Probability of crossover. Defaults to 0.7. # TODO: Change to: 0.8
-            mutation_probability (float, optional): Probability of mutation. Defaults to 0.2. # TODO: Change to: 0.15
+            crossover_probability (float, optional): Probability of crossover. Defaults to 0.8.
+            mutation_probability (float, optional): Probability of mutation. Defaults to 0.15.
             tournsize (int | None, optional): Number of individuals for tournament selection.
                 If None, set to max(3, int(log2(population_size))). Defaults to None.
             size_penalty_threshold (int, optional): Threshold for applying size penalty to
-                expressions longer than this value. Defaults to 15. # TODO: Change to: 25
+                expressions longer than this value. Defaults to 25.
             size_penalty_coefficient (float, optional): Penalty coefficient for expression size.
-                Defaults to 0.0001. # TODO: Change to: 0.0005
-            max_depth (int, optional): Maximum depth of GP trees. Defaults to 7. # TODO: Change to: 10
+                Defaults to 0.0005.
+            max_depth (int, optional): Maximum depth of GP trees. Defaults to 10.
             decimal (int, optional): Decimal places for metrics output. Defaults to 6.
             line_length (int, optional): Line length for console output. Defaults to 56.
             overwrite (bool, optional): Whether to overwrite existing results. Defaults to False.
         """
 
         self.model_files_path = [listdir_full(f) for f in model_files_path]
-        self.save_folder_path = str(Path(save_folder_path))
+        self.save_folder_path_name = str(Path(save_folder_path_name))
         self.population_size = population_size
         self.num_generations = num_generations
         self.crossover_probability = crossover_probability
@@ -517,9 +542,7 @@ class GMPES:
             for i, files in enumerate(self.model_files_path)
         }
 
-        self.result_saver = ResultSaver(
-            os.path.join(self.save_folder_path, "results.json")
-        )
+        self.result_saver = ResultSaver(self.save_folder_path_name)
         self.data_splits = None
         self.pset = None
         self.toolbox = None
@@ -703,7 +726,7 @@ class GMPES:
 
         result = {}
         for model, model_key in zip(models, self.models.keys()):
-            model_name = self.models[model_key]  # Use name from self.models
+            model_name = self.models[model_key]
             train_data = {}
             test_data = {}
             if self._filter_by_name("train", model):  # type: ignore
@@ -717,37 +740,32 @@ class GMPES:
                 model_files = (
                     [model] if isinstance(model, (str, Path)) else model
                 )
-                len_files = len(model_files)
-                if len_files > 1:
-                    train_files = model_files[: len_files // 2]
-                    test_files = model_files[len_files // 2 :]
-                    train_data = self._load_pickle_files(train_files)
-                    test_data = self._load_pickle_files(test_files)
-                else:
-                    data = self._load_pickle_files(model_files)
-                    split_point = int(len(data["ground_truth_scores"]) * 0.7)
-                    train_data = {
-                        "sentences_a_embeddings": data[
-                            "sentences_a_embeddings"
-                        ][:split_point],
-                        "sentences_b_embeddings": data[
-                            "sentences_b_embeddings"
-                        ][:split_point],
-                        "ground_truth_scores": data["ground_truth_scores"][
-                            :split_point
-                        ],
-                    }
-                    test_data = {
-                        "sentences_a_embeddings": data[
-                            "sentences_a_embeddings"
-                        ][split_point:],
-                        "sentences_b_embeddings": data[
-                            "sentences_b_embeddings"
-                        ][split_point:],
-                        "ground_truth_scores": data["ground_truth_scores"][
-                            split_point:
-                        ],
-                    }
+
+                data = self._load_pickle_files(model_files)
+                split_point = int(len(data["ground_truth_scores"]) * 0.7)
+
+                train_data = {
+                    "sentences_a_embeddings": data["sentences_a_embeddings"][
+                        :split_point
+                    ],
+                    "sentences_b_embeddings": data["sentences_b_embeddings"][
+                        :split_point
+                    ],
+                    "ground_truth_scores": data["ground_truth_scores"][
+                        :split_point
+                    ],
+                }
+                test_data = {
+                    "sentences_a_embeddings": data["sentences_a_embeddings"][
+                        split_point:
+                    ],
+                    "sentences_b_embeddings": data["sentences_b_embeddings"][
+                        split_point:
+                    ],
+                    "ground_truth_scores": data["ground_truth_scores"][
+                        split_point:
+                    ],
+                }
             result[model_name] = {"train": train_data, "test": test_data}
         return result
 
@@ -800,12 +818,19 @@ class GMPES:
             if np.isnan(spearman_corr):  # type: ignore
                 return (0.0, 0.0)
 
-            size_penalty = (
-                len(individual) * self.size_penalty_coefficient
-                if len(individual) > self.size_penalty_threshold
-                else 0
+            # size_penalty = (
+            #     len(individual) * self.size_penalty_coefficient
+            #     if len(individual) > self.size_penalty_threshold
+            #     else 0
+            # )
+            size_penalty = max(
+                (len(individual) - self.size_penalty_threshold)
+                * self.size_penalty_coefficient,
+                0,
             )
+
             return (max(0, spearman_corr - size_penalty), spearman_corr)  # type: ignore
+
         except Exception:  # pylint: disable=W0718
             return (0.0, 0.0)
 
@@ -923,7 +948,8 @@ class GMPES:
                     )
                 )
             except Exception as e:  # pylint: disable=W0718
-                return f"Failed to simplify => {str(e)}"
+                print(f"Failed to simplify best expression => {str(e)}")
+                return expr_str
 
         train_metrics = {
             model_name: round(
@@ -934,7 +960,7 @@ class GMPES:
             )
             for model_name in self.data_splits  # type: ignore
         }
-        train_metrics["best_fitness"] = round(
+        train_metrics["GMPES"] = round(
             best_expr.fitness.values[1], self.decimal
         )
 
@@ -945,7 +971,7 @@ class GMPES:
             )
             for model_name in self.data_splits  # type: ignore
         }
-        test_metrics["test_correlation"] = round(test_corr, self.decimal)
+        test_metrics["GMPES"] = round(test_corr, self.decimal)
 
         return {
             "best_expression": expression_to_sympy(best_expr),
@@ -977,26 +1003,33 @@ class GMPES:
         self._split_data(ds_name)
         start_time = time.time()
 
+        labels = [
+            "Dataset",
+            *[f"Model {i+1}" for i in range(len(self.models))],
+            "Population size",
+            "Number of generations",
+            "Crossover probability",
+            "Mutation probability",
+        ]
+        values = [
+            ds_name,
+            *self.models.values(),
+            str(self.population_size),
+            str(self.num_generations),
+            str(self.crossover_probability),
+            str(self.mutation_probability),
+        ]
+
+        min_length = max(len(f"{i}") for i in labels + values) * 2 + 3
+        line_length = max(self.line_length, min_length + 4)
+
         print(
             "",
-            " Variables ".center(self.line_length, "="),
-            f"Dataset = {ds_name}".center(self.line_length),
+            " Variables ".center(line_length, "="),
             *[
-                f"Model {i+1} = {name}".center(self.line_length)
-                for i, name in enumerate(self.models.values())
+                f"{label:>{line_length//2 - 2 + line_length%2}} = {value}"
+                for label, value in zip(labels, values)
             ],
-            f"Population size = {self.population_size}".center(
-                self.line_length
-            ),
-            f"Number of generations = {self.num_generations}".center(
-                self.line_length
-            ),
-            f"Crossover probability = {self.crossover_probability}".center(
-                self.line_length
-            ),
-            f"Mutation probability = {self.mutation_probability}".center(
-                self.line_length
-            ),
             sep="\n",
             end="\n\n",
         )
@@ -1043,24 +1076,43 @@ class GMPES:
         )
         metrics["time_elapsed"] = msg
 
+        ds_key = f"{ds_name}_dataset"
+        if self.overwrite:
+            existing_result = self.result_saver.get_existing_result(
+                self.models, parameters, ds_key
+            )
+            if existing_result:
+                existing_gmpes_score = existing_result.get(
+                    "train_metrics", {}
+                ).get("GMPES", 0)
+                new_gmpes_score = metrics.get("train_metrics", {}).get(
+                    "GMPES", 0
+                )
+                if existing_gmpes_score > new_gmpes_score:
+
+                    print(f"\nGMPES completed in {msg}.")
+                    return metrics
+
         self.result_saver.log_dataset(
             self.models, parameters, ds_name, metrics, self.overwrite
         )
-        print(f"\nGenetic programming completed in {msg}.")
+
+        print(f"\nGMPES completed in {msg}.")
         return metrics
 
 
 if __name__ == "__main__":
 
     # Algorithm Testing
-
     gmpes = GMPES(
         model_files_path=[
-            sys.path[0] + r"\Embeddings\Size 768\SimCSE embeddings",
-            sys.path[0] + r"\Embeddings\Size 768\T5 embeddings\Large",
+            sys.path[0] + r"\Embeddings\Size 768\SimCSE",
         ],
         population_size=5,
         num_generations=5,
+        # overwrite=True,
     )
-    metrics = gmpes.run("stsb")
+
+    metrics = gmpes.run("sts13")
+    print_results_box(metrics, 56, True)
     print(metrics)
