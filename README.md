@@ -184,12 +184,12 @@ with open("test model_test ds.pkl", "wb") as f:
                            "train_metrics": {
                                "SimCSE RoBERTa base": 0.853002,
                                "T5 large": 0.833824,
-                               "best_fitness": 0.863041
+                               "GMPES": 0.863041
                            },
                            "test_metrics": {
                                "SimCSE RoBERTa base": 0.856638,
                                "T5 large": 0.853606,
-                               "test_correlation": 0.867393
+                               "GMPES": 0.867393
                            },
                            "time_elapsed": "22 minutes and 15 seconds"
                        },
